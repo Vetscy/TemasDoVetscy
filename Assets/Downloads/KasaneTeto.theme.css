@@ -1,0 +1,114 @@
+/**
+ * @name Kasane teto
+ * @author Vetscy
+ * @version 0.04
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
+
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS - Rosa substituído por vermelho suave */
+  --main-color: #c0392b;
+  --hover-color: #a93226;
+  --success-color: #43b581;
+  --danger-color: #c0392b;
+
+  /* STATUS COLORS */
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #c0392b;
+  --streaming-color: #8e44ad;
+  --offline-color: #808080;
+
+  /* APP BACKGROUND */
+  --background-shading-percent: 100%;
+  --background-image: url("https://i.ytimg.com/vi/l8ULE7V810U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLATp7cM4gaA4zX8tTbQYwNVjkgnaA");
+  --background-attachment: fixed;
+  --background-filter: blur(5px) brightness(0.9) saturate(1.2); /* Blur suave */
+
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image);
+  --user-popout-attachment: var(--background-attachment);
+  --user-popout-filter: var(--background-filter);
+
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image);
+  --user-modal-attachment: var(--background-attachment);
+  --user-modal-filter: var(--background-filter);
+
+  /* HOME ICON */
+  --home-icon: url(https://i.pinimg.com/736x/1f/4f/c1/1f4fc1b038d47eb18f757d096cb8c8ce.jpg);
+
+  /* FONTS */
+  --main-font: "gg sans", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3);
+  --card-shading: rgba(252, 252, 252, 0.3);
+}
+
+/* Substituir "ClearVision 7.0.0" vindo do tema remoto */
+[class*="themeName"], 
+[class*="info-"] strong {
+  font-size: 0 !important;
+  position: relative;
+  width: 120px;
+  height: 32px;
+  display: inline-block;
+}
+
+[class*="themeName"]::before,
+[class*="info-"] strong::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 32px;
+  background-image: url("https://img1.picmix.com/output/stamp/normal/5/7/8/5/2645875_90ad1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.visual-refresh:not(.platform-osx) .leading_c38106::after {
+  content: "TETO!";
+  display: inline-block;
+  position: static;
+  margin-left: -90px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-normal);
+  filter: drop-shadow(0 0 5px var(--hsl-main-color));
+  
+  /* IMAGEM */
+  background-image: url("https://i.pinimg.com/736x/e3/2d/af/e32daf5b71a7b29be5c827377db3ebba.jpg");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: left center;
+
+  /* Espaço para a imagem aparecer à esquerda do texto */
+  padding-left: 40px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+
+
+.visual-refresh:not(.platform-osx) .leading_c38106::before {
+    content: "ClearVision";
+    position: static;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-normal);
+    order: 2;
+    filter: drop-shadow(0 0 5px var(--hsl-main-color));
+    visibility: hidden; /* Torna o conteúdo invisível, mas mantém o espaço ocupado */
+}
